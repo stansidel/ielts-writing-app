@@ -8,13 +8,6 @@
 import SwiftUI
 import SwiftData
 
-private let taskTypes: [TaskType] = [
-    TaskType(name: "IELTS General Task 1", minWordsCount: 150, expectedTimeInMinutes: 20),
-    TaskType(name: "IELTS General Task 2", minWordsCount: 250, expectedTimeInMinutes: 40),
-    TaskType(name: "IELTS Academic Task 1", minWordsCount: 150, expectedTimeInMinutes: 20),
-    TaskType(name: "IELTS Academic Task 2", minWordsCount: 250, expectedTimeInMinutes: 40)
-]
-
 struct ContentView: View {
     @Environment(\.modelContext) private var modelContext
     @Query(sort: \Item.timestamp, order: .reverse) private var items: [Item]
@@ -26,7 +19,7 @@ struct ContentView: View {
                     NavigationLink {
                         SessionView(
                             item: item,
-                            taskTypes: taskTypes
+                            taskTypes: TaskType.ieltsTypes
                         )
                         .padding(16)
                         .frame(maxHeight: .infinity)
@@ -56,7 +49,7 @@ struct ContentView: View {
         withAnimation {
             let newItem = Item(
                 timestamp: Date(),
-                taskType: taskTypes.first!,
+                taskType: TaskType.defaultIELTSType,
                 question: "",
                 answer: "",
                 startedAt: nil,
