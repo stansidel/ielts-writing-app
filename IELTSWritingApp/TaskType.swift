@@ -6,3 +6,9 @@
 //
 
 import Foundation
+
+struct TaskType: Hashable, Codable {
+    let name: String
+    let minWordsCount: Int
+    let expectedTimeInMinutes: Int
+}

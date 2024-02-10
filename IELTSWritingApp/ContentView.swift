@@ -8,18 +8,33 @@
 import SwiftUI
 import SwiftData
 
+private let taskTypes: [TaskType] = [
+    TaskType(name: "IELTS General Task 1", minWordsCount: 150, expectedTimeInMinutes: 20),
+    TaskType(name: "IELTS General Task 2", minWordsCount: 250, expectedTimeInMinutes: 40),
+    TaskType(name: "IELTS Academic Task 1", minWordsCount: 150, expectedTimeInMinutes: 20),
+    TaskType(name: "IELTS Academic Task 2", minWordsCount: 250, expectedTimeInMinutes: 40)
+]
+
 struct ContentView: View {
     @Environment(\.modelContext) private var modelContext
-    @Query private var items: [Item]
+    @Query(sort: \Item.timestamp, order: .reverse) private var items: [Item]
 
     var body: some View {
         NavigationSplitView {
             List {
                 ForEach(items) { item in
                     NavigationLink {
-                        Text("Item at \(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))")
+                        SessionView(
+                            item: item,
+                            taskTypes: taskTypes
+                        )
+                        .padding(16)
+                        .frame(maxHeight: .infinity)
                     } label: {
-                        Text(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))
+                        VStack {
+                            Text(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))
+                            Text(item.taskType.name)
+                        }
                     }
                 }
                 .onDelete(perform: deleteItems)
@@ -39,7 +54,14 @@ struct ContentView: View {
 
     private func addItem() {
         withAnimation {
-            let newItem = Item(timestamp: Date())
+            let newItem = Item(
+                timestamp: Date(),
+                taskType: taskTypes.first!,
+                question: "",
+                answer: "",
+                startedAt: nil,
+                completedAt: nil
+            )
             modelContext.insert(newItem)
         }
     }

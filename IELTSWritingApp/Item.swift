@@ -11,8 +11,18 @@ import SwiftData
 @Model
 final class Item {
     var timestamp: Date
-    
-    init(timestamp: Date) {
+    var taskType: TaskType
+    var question: String
+    var answer: String
+    var startedAt: Date?
+    var completedAt: Date?
+
+    init(timestamp: Date, taskType: TaskType, question: String, answer: String, startedAt: Date?, completedAt: Date?) {
         self.timestamp = timestamp
+        self.taskType = taskType
+        self.question = question
+        self.answer = answer
+        self.startedAt = startedAt
+        self.completedAt = completedAt
     }
 }

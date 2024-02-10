@@ -12,6 +12,9 @@
 		2C1723EC2B778466007A5BE7 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1723EB2B778466007A5BE7 /* Item.swift */; };
 		2C1723EE2B778467007A5BE7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C1723ED2B778467007A5BE7 /* Assets.xcassets */; };
 		2C1723F12B778467007A5BE7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C1723F02B778467007A5BE7 /* Preview Assets.xcassets */; };
+		2C1723F92B7784A8007A5BE7 /* SessionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1723F82B7784A8007A5BE7 /* SessionView.swift */; };
+		2C1723FB2B7784C1007A5BE7 /* WritingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1723FA2B7784C1007A5BE7 /* WritingView.swift */; };
+		2C1723FD2B778B9A007A5BE7 /* TaskType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1723FC2B778B9A007A5BE7 /* TaskType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,9 @@
 		2C1723ED2B778467007A5BE7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2C1723F02B778467007A5BE7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2C1723F22B778467007A5BE7 /* IELTSWritingApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = IELTSWritingApp.entitlements; sourceTree = "<group>"; };
+		2C1723F82B7784A8007A5BE7 /* SessionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionView.swift; sourceTree = "<group>"; };
+		2C1723FA2B7784C1007A5BE7 /* WritingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WritingView.swift; sourceTree = "<group>"; };
+		2C1723FC2B778B9A007A5BE7 /* TaskType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +66,9 @@
 				2C1723ED2B778467007A5BE7 /* Assets.xcassets */,
 				2C1723F22B778467007A5BE7 /* IELTSWritingApp.entitlements */,
 				2C1723EF2B778467007A5BE7 /* Preview Content */,
+				2C1723F82B7784A8007A5BE7 /* SessionView.swift */,
+				2C1723FA2B7784C1007A5BE7 /* WritingView.swift */,
+				2C1723FC2B778B9A007A5BE7 /* TaskType.swift */,
 			);
 			path = IELTSWritingApp;
 			sourceTree = "<group>";
@@ -145,6 +154,9 @@
 				2C1723EA2B778466007A5BE7 /* ContentView.swift in Sources */,
 				2C1723EC2B778466007A5BE7 /* Item.swift in Sources */,
 				2C1723E82B778466007A5BE7 /* IELTSWritingAppApp.swift in Sources */,
+				2C1723FB2B7784C1007A5BE7 /* WritingView.swift in Sources */,
+				2C1723FD2B778B9A007A5BE7 /* TaskType.swift in Sources */,
+				2C1723F92B7784A8007A5BE7 /* SessionView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,7 +289,7 @@
 				CODE_SIGN_ENTITLEMENTS = IELTSWritingApp/IELTSWritingApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_ASSET_PATHS = "\"IELTSWritingApp/Preview Content\"";
 				DEVELOPMENT_TEAM = 5C9TGFA48W;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -289,7 +301,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = family.sidel.IELTSWritingApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -305,7 +317,7 @@
 				CODE_SIGN_ENTITLEMENTS = IELTSWritingApp/IELTSWritingApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_ASSET_PATHS = "\"IELTSWritingApp/Preview Content\"";
 				DEVELOPMENT_TEAM = 5C9TGFA48W;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -317,7 +329,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = family.sidel.IELTSWritingApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;

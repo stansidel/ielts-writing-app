@@ -8,11 +8,29 @@
 import SwiftUI
 
 struct SessionView: View {
+    @Bindable var item: Item
+    let taskTypes: [TaskType]
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        WritingView(
+            taskTypes: taskTypes,
+            item: item
+        )
     }
 }
 
 #Preview {
-    SessionView()
+    SessionView(
+        item: Item(
+            timestamp: Date(),
+            taskType: TaskType(name: "Name", minWordsCount: 100, expectedTimeInMinutes: 20),
+            question: "",
+            answer: "",
+            startedAt: nil,
+            completedAt: nil
+        ),
+        taskTypes: [
+            TaskType(name: "Task type", minWordsCount: 100, expectedTimeInMinutes: 20)
+        ]
+    )
 }
